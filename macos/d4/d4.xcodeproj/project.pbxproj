@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6D114A391DAF12E400DB669E /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6D114A381DAF12E400DB669E /* main.cpp */; };
 		6D6094171DAF2F8600C1D635 /* bitstream.c in Sources */ = {isa = PBXBuildFile; fileRef = 6D6093F11DAF2F8600C1D635 /* bitstream.c */; };
 		6D6094181DAF2F8600C1D635 /* decode1d.c in Sources */ = {isa = PBXBuildFile; fileRef = 6D6093F51DAF2F8600C1D635 /* decode1d.c */; };
 		6D6094191DAF2F8600C1D635 /* decode1f.c in Sources */ = {isa = PBXBuildFile; fileRef = 6D6093F61DAF2F8600C1D635 /* decode1f.c */; };
@@ -24,6 +23,7 @@
 		6D6094321DAF2F8600C1D635 /* zfp.c in Sources */ = {isa = PBXBuildFile; fileRef = 6D6094161DAF2F8600C1D635 /* zfp.c */; };
 		6D6094381DAF312D00C1D635 /* testzfp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6D6094371DAF312D00C1D635 /* testzfp.cpp */; };
 		6D60943B1DAF324200C1D635 /* fields.c in Sources */ = {isa = PBXBuildFile; fileRef = 6D60943A1DAF324200C1D635 /* fields.c */; };
+		6D60943D1DAF38BF00C1D635 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6D60943C1DAF38BF00C1D635 /* main.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -40,7 +40,6 @@
 
 /* Begin PBXFileReference section */
 		6D114A351DAF12E400DB669E /* d4 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = d4; sourceTree = BUILT_PRODUCTS_DIR; };
-		6D114A381DAF12E400DB669E /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		6D6093E11DAF2F8600C1D635 /* cache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cache.h; sourceTree = "<group>"; };
 		6D6093E21DAF2F8600C1D635 /* memory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = memory.h; sourceTree = "<group>"; };
 		6D6093E31DAF2F8600C1D635 /* zfparray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zfparray.h; sourceTree = "<group>"; };
@@ -95,6 +94,7 @@
 		6D6094371DAF312D00C1D635 /* testzfp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = testzfp.cpp; sourceTree = "<group>"; };
 		6D6094391DAF315C00C1D635 /* testzfp.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = testzfp.hpp; sourceTree = "<group>"; };
 		6D60943A1DAF324200C1D635 /* fields.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = fields.c; sourceTree = "<group>"; };
+		6D60943C1DAF38BF00C1D635 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = ../../../src/main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,7 +129,7 @@
 		6D114A371DAF12E400DB669E /* d4 */ = {
 			isa = PBXGroup;
 			children = (
-				6D114A381DAF12E400DB669E /* main.cpp */,
+				6D60943C1DAF38BF00C1D635 /* main.cpp */,
 			);
 			path = d4;
 			sourceTree = "<group>";
@@ -314,6 +314,7 @@
 				6D60941D1DAF2F8600C1D635 /* decode3f.c in Sources */,
 				6D6094321DAF2F8600C1D635 /* zfp.c in Sources */,
 				6D60941B1DAF2F8600C1D635 /* decode2f.c in Sources */,
+				6D60943D1DAF38BF00C1D635 /* main.cpp in Sources */,
 				6D6094171DAF2F8600C1D635 /* bitstream.c in Sources */,
 				6D6094231DAF2F8600C1D635 /* encode3f.c in Sources */,
 				6D60941F1DAF2F8600C1D635 /* encode1f.c in Sources */,
@@ -325,7 +326,6 @@
 				6D6094381DAF312D00C1D635 /* testzfp.cpp in Sources */,
 				6D6094191DAF2F8600C1D635 /* decode1f.c in Sources */,
 				6D60941C1DAF2F8600C1D635 /* decode3d.c in Sources */,
-				6D114A391DAF12E400DB669E /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

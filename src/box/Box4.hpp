@@ -20,12 +20,12 @@
 
 class Box4
 {
-public:
-    Box4(long inSize);
-    ~Box4();
-    
-private:
-    long size;
+    public:
+        Box4(long inSize);
+        ~Box4();
+        
+    private:
+        long size;
 };
 
 #endif /* Box4_hpp */

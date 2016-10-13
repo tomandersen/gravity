@@ -1,4 +1,4 @@
-How I build it.
+Instructions & notes.
 ———————————
 
 Git for the main repo (src has platform agnostic source)
@@ -9,8 +9,5 @@ cd libs
 
 ZFP - compression
 Toms-MacBook-Pro:libs tandersen$ git clone git@github.com:LLNL/zfp.git
-Toms-MacBook-Pro:libs tandersen$ cd zfp
-Toms-MacBook-Pro:zfp tandersen$ make
 
-A static library is created.
-
+Add in the files we need from zfp directly into the project - no library linking. 

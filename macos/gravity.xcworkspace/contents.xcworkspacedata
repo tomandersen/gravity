@@ -4,4 +4,7 @@
    <FileRef
       location = "group:d4/d4.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:field-energy/field-energy.xcodeproj">
+   </FileRef>
 </Workspace>

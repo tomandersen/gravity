@@ -95,9 +95,9 @@
 		6D6094371DAF312D00C1D635 /* testzfp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = testzfp.cpp; sourceTree = "<group>"; };
 		6D6094391DAF315C00C1D635 /* testzfp.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = testzfp.hpp; sourceTree = "<group>"; };
 		6D60943A1DAF324200C1D635 /* fields.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = fields.c; sourceTree = "<group>"; };
-		6D60943C1DAF38BF00C1D635 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = ../../../src/main.cpp; sourceTree = "<group>"; };
-		6D60943E1DAF39BC00C1D635 /* Box4.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Box4.cpp; path = ../../../src/box/Box4.cpp; sourceTree = "<group>"; };
-		6D60943F1DAF39BC00C1D635 /* Box4.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Box4.hpp; path = ../../../src/box/Box4.hpp; sourceTree = "<group>"; };
+		6D60943C1DAF38BF00C1D635 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = ../../src/main.cpp; sourceTree = SOURCE_ROOT; };
+		6D60943E1DAF39BC00C1D635 /* Box4.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Box4.cpp; path = ../../src/box/Box4.cpp; sourceTree = SOURCE_ROOT; };
+		6D60943F1DAF39BC00C1D635 /* Box4.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Box4.hpp; path = ../../src/box/Box4.hpp; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */

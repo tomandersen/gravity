@@ -17,6 +17,11 @@
 // This data is stored in xyz planes - six for each t, (since six components of the linearized metric in a minkowski space)
 // So for Box4 of size 8 we will need 8*6 = 48 zfp compressed arrays, (we work in uncompressed, store as compressed).
 
+// There are always 6 h (h00, h01, etc). So hard code that in.
+// array size  - one to hold each array.
+// routines to load/store a box.
+// routines to load intial conditions (usually all 0s, except for some central masses)
+// 
 
 class Box4
 {

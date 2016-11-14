@@ -26,9 +26,9 @@ int main(int argc, const char * argv[]) {
     
     
     const double phaseA = 0;
-    const double phaseB = 0.0;
+    const double phaseB = M_PI/4;
     const double amplitudeA = 1; //sqrt(2);
-    const double amplitudeB = 0;
+    const double amplitudeB = 1;
     const double speedOfLight = 1.0;
     const double freq = 3.0;
     const double waveK = freq/speedOfLight;
@@ -99,9 +99,9 @@ int main(int argc, const char * argv[]) {
     
     dispatch_group_wait(grp, DISPATCH_TIME_FOREVER);
     if (phaseB != 0.0)
-        printf("freq: %d c: %d phase PI/%d calcSize %d, energy\n", (int) freq, (int)speedOfLight, (int)(M_PI/phaseB), (int)numToDo);
+        printf("freq: %d c: %d phase PI/%d calcSize %d gridSize %d, energy\n", (int) freq, (int)speedOfLight, (int)(M_PI/phaseB), (int)numToDo, (int)gridSize*2);
     else
-        printf("freq: %d c: %d calcSize %d, energy\n", (int) freq, (int)speedOfLight, (int)numToDo);
+        printf("freq: %d c: %d calcSize %d gridSize %d, energy\n", (int) freq, (int)speedOfLight, (int)numToDo, (int)gridSize*2);
 
     for (long count = 0; count < numToDo; count++)
     {

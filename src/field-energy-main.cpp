@@ -26,7 +26,7 @@ int main(int argc, const char * argv[]) {
     
     
     const double phaseA = 0;
-    const double phaseB = M_PI/4;
+    const double phaseB = 0.0; // M_PI/4;
     const double amplitudeA = 1; //sqrt(2);
     const double amplitudeB = 1;
     const double speedOfLight = 1.0;
@@ -40,7 +40,7 @@ int main(int argc, const char * argv[]) {
     // We carefully put the sources in the middle of the line of cubes along the x axis.
     // So the cubes are setup not to hit x = 0, y = 0 or z = 0 with offsets
     
-    const double cubeSize = 0.1;
+    const double cubeSize = 0.5;
     const double halfCube = cubeSize/2.0;
     
     long numToDo = 100;
@@ -53,7 +53,9 @@ int main(int argc, const char * argv[]) {
     double minZ = halfCube;
     double maxZ = gridSize*cubeSize;
     
-    double timeStep = M_PI/17.8/freq;
+    //double timeStep = M_PI/17.8/freq;
+    //    double timeStep = M_PI/73.88765/freq;
+    double timeStep = M_PI/9.1876565/freq; // speed up - use fewer time steps
     double theEnergy[numToDo];
     double* energy = theEnergy;
     

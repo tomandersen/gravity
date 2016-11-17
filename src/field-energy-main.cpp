@@ -40,10 +40,10 @@ int main(int argc, const char * argv[]) {
     // We carefully put the sources in the middle of the line of cubes along the x axis.
     // So the cubes are setup not to hit x = 0, y = 0 or z = 0 with offsets
     
-    const double cubeSize = 0.5;
+    const double cubeSize = 0.1347;
     const double halfCube = cubeSize/2.0;
     
-    long numToDo = 100;
+    long numToDo = 300;
     long gridSize = 2*numToDo;
     
     double minX = -gridSize*cubeSize;

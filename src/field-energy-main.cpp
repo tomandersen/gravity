@@ -43,7 +43,7 @@ int main(int argc, const char * argv[]) {
     const double cubeSize = 0.1347;
     const double halfCube = cubeSize/2.0;
     
-    long numToDo = 300;
+    long numToDo = 100;
     long gridSize = 2*numToDo;
     
     double minX = -gridSize*cubeSize;

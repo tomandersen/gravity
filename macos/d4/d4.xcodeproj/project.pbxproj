@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6D4F053F1DE215320038F646 /* hydrogen-main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6D4F053D1DE215120038F646 /* hydrogen-main.cpp */; };
+		6D4F05421DE3C4530038F646 /* ParticleHistory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6D4F05401DE3C4530038F646 /* ParticleHistory.cpp */; };
 		6D6094171DAF2F8600C1D635 /* bitstream.c in Sources */ = {isa = PBXBuildFile; fileRef = 6D6093F11DAF2F8600C1D635 /* bitstream.c */; };
 		6D6094181DAF2F8600C1D635 /* decode1d.c in Sources */ = {isa = PBXBuildFile; fileRef = 6D6093F51DAF2F8600C1D635 /* decode1d.c */; };
 		6D6094191DAF2F8600C1D635 /* decode1f.c in Sources */ = {isa = PBXBuildFile; fileRef = 6D6093F61DAF2F8600C1D635 /* decode1f.c */; };
@@ -37,10 +39,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
+		6D4F05341DE214B50038F646 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		6D114A351DAF12E400DB669E /* d4 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = d4; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D4F05361DE214B50038F646 /* hydrogen */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = hydrogen; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D4F053D1DE215120038F646 /* hydrogen-main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "hydrogen-main.cpp"; sourceTree = "<group>"; };
+		6D4F05401DE3C4530038F646 /* ParticleHistory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ParticleHistory.cpp; sourceTree = "<group>"; };
+		6D4F05411DE3C4530038F646 /* ParticleHistory.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ParticleHistory.hpp; sourceTree = "<group>"; };
 		6D6093E11DAF2F8600C1D635 /* cache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cache.h; sourceTree = "<group>"; };
 		6D6093E21DAF2F8600C1D635 /* memory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = memory.h; sourceTree = "<group>"; };
 		6D6093E31DAF2F8600C1D635 /* zfparray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zfparray.h; sourceTree = "<group>"; };
@@ -108,6 +123,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6D4F05331DE214B50038F646 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -115,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				6D114A371DAF12E400DB669E /* d4 */,
+				6D4F05371DE214B50038F646 /* hydrogen */,
 				6D114A361DAF12E400DB669E /* Products */,
 				6D6094341DAF312D00C1D635 /* tests */,
 				6D6093DF1DAF2F8600C1D635 /* zfp */,
@@ -125,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				6D114A351DAF12E400DB669E /* d4 */,
+				6D4F05361DE214B50038F646 /* hydrogen */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -137,6 +161,16 @@
 				6D60943F1DAF39BC00C1D635 /* Box4.hpp */,
 			);
 			path = d4;
+			sourceTree = "<group>";
+		};
+		6D4F05371DE214B50038F646 /* hydrogen */ = {
+			isa = PBXGroup;
+			children = (
+				6D4F053D1DE215120038F646 /* hydrogen-main.cpp */,
+				6D4F05401DE3C4530038F646 /* ParticleHistory.cpp */,
+				6D4F05411DE3C4530038F646 /* ParticleHistory.hpp */,
+			);
+			path = hydrogen;
 			sourceTree = "<group>";
 		};
 		6D6093DF1DAF2F8600C1D635 /* zfp */ = {
@@ -277,6 +311,23 @@
 			productReference = 6D114A351DAF12E400DB669E /* d4 */;
 			productType = "com.apple.product-type.tool";
 		};
+		6D4F05351DE214B50038F646 /* hydrogen */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6D4F053C1DE214B50038F646 /* Build configuration list for PBXNativeTarget "hydrogen" */;
+			buildPhases = (
+				6D4F05321DE214B50038F646 /* Sources */,
+				6D4F05331DE214B50038F646 /* Frameworks */,
+				6D4F05341DE214B50038F646 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = hydrogen;
+			productName = hydrogen;
+			productReference = 6D4F05361DE214B50038F646 /* hydrogen */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -288,6 +339,11 @@
 				TargetAttributes = {
 					6D114A341DAF12E400DB669E = {
 						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+					};
+					6D4F05351DE214B50038F646 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 3528URF32E;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -305,6 +361,7 @@
 			projectRoot = "";
 			targets = (
 				6D114A341DAF12E400DB669E /* d4 */,
+				6D4F05351DE214B50038F646 /* hydrogen */,
 			);
 		};
 /* End PBXProject section */
@@ -332,6 +389,15 @@
 				6D6094381DAF312D00C1D635 /* testzfp.cpp in Sources */,
 				6D6094191DAF2F8600C1D635 /* decode1f.c in Sources */,
 				6D60941C1DAF2F8600C1D635 /* decode3d.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6D4F05321DE214B50038F646 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D4F05421DE3C4530038F646 /* ParticleHistory.cpp in Sources */,
+				6D4F053F1DE215320038F646 /* hydrogen-main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -451,6 +517,22 @@
 			};
 			name = Release;
 		};
+		6D4F053A1DE214B50038F646 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 3528URF32E;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		6D4F053B1DE214B50038F646 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 3528URF32E;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -471,6 +553,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		6D4F053C1DE214B50038F646 /* Build configuration list for PBXNativeTarget "hydrogen" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6D4F053A1DE214B50038F646 /* Debug */,
+				6D4F053B1DE214B50038F646 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

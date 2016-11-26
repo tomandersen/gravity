@@ -10,10 +10,7 @@
 #define ParticleHistory_hpp
 
 #include <stdio.h>
-
-// classes example
-#include <iostream>
-using namespace std;
+#include "ScalarField.hpp"
 
 /// The idea is that there is one history object for each particle.
 /// x,y,z,t,vx, vy, vz
@@ -39,26 +36,41 @@ using namespace std;
 /// We will want long particle trails.
 /// Use 1D zfp compression. Perhaps compression not needed?
 
+typedef struct {
+    double x; // lab coords
+    double y;
+    double z;
+    double vx; // lab speed
+    double vy;
+    double vz;
+    double t; // lab time -- or is this a deltat time step - no - not a constant delta t, may want to vary time steps
+    double T; // particle proper time.
+    double A; // amplitude changes - amplitude is simply equal to the mearsured amplitude from the previous step, so the particle conserves energy.
+} ParticleState;
+
+
 
 /// Computational time - we need to add up from 2 particle histories, say a million steps back in history (given suitable steps)
 class ParticleHistory {
     public:
-        double* x; // lab coords
-        double* y;
-        double* z;
-        double* vx; // lab speed
-        double* vy;
-        double* vz;
-        double* t; // lab time -- or is this a deltat time step - no - not a constant delta t, may want to vary time steps  
-        double* T; // particle proper time.
+    ParticleState* states;
+        long maxLength;        // max number of histories to store. 1 million histories is 8 doubles x 8 bytes x 1 million = 64 MB. So length is something like 1M - 100Million.
         
-        long length;        // max number of histories to store. 1 million histories is 8 doubles x 8 bytes x 1 million = 64 MB. So length is something like 1M - 100Million.
-        
+        long stateCount;    // how many states we have stored.
         double mass;        // electron or proton
-        double frequency; // compton ish
-        double amplitude; // 0 --> 1 how much mass the particle exhanges each cycle? - fractional mass loss, etc?
+        double frequency;   // compton ish
+        double amplitude;   // 0 --> 1 how much mass the particle exhanges each cycle? - fractional mass loss, etc?
+        double initialPhase;
     public:
         ParticleHistory(long length); // malloc the arrays. calloc even
+        void CalculateNextParticlePosition(ParticleHistory* other);
+    
+        void AddState(const ParticleState* intialState);
+        void AddStateFromScalarField(const ScalarField* inField, double labT);
+    
+        void StateAt(ParticleState* outState, double labTime); // interpolates, filling in the passed state.
+        void AddToScalarFieldAtPoint(ScalarField* ioField, const ParticleState* atPoint, double labT);
+
 };
 
 

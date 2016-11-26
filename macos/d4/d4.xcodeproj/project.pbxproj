@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		6D4F053F1DE215320038F646 /* hydrogen-main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6D4F053D1DE215120038F646 /* hydrogen-main.cpp */; };
 		6D4F05421DE3C4530038F646 /* ParticleHistory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6D4F05401DE3C4530038F646 /* ParticleHistory.cpp */; };
+		6D4F05461DE9180E0038F646 /* Utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6D4F05441DE9180E0038F646 /* Utils.cpp */; };
+		6D4F05471DE9180E0038F646 /* Utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6D4F05441DE9180E0038F646 /* Utils.cpp */; };
+		6D4F054F1DEA429E0038F646 /* ScalarField.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6D4F054D1DEA429E0038F646 /* ScalarField.cpp */; };
+		6D4F05501DEA429E0038F646 /* ScalarField.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6D4F054D1DEA429E0038F646 /* ScalarField.cpp */; };
 		6D6094171DAF2F8600C1D635 /* bitstream.c in Sources */ = {isa = PBXBuildFile; fileRef = 6D6093F11DAF2F8600C1D635 /* bitstream.c */; };
 		6D6094181DAF2F8600C1D635 /* decode1d.c in Sources */ = {isa = PBXBuildFile; fileRef = 6D6093F51DAF2F8600C1D635 /* decode1d.c */; };
 		6D6094191DAF2F8600C1D635 /* decode1f.c in Sources */ = {isa = PBXBuildFile; fileRef = 6D6093F61DAF2F8600C1D635 /* decode1f.c */; };
@@ -56,6 +60,11 @@
 		6D4F053D1DE215120038F646 /* hydrogen-main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = "hydrogen-main.cpp"; sourceTree = "<group>"; };
 		6D4F05401DE3C4530038F646 /* ParticleHistory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ParticleHistory.cpp; sourceTree = "<group>"; };
 		6D4F05411DE3C4530038F646 /* ParticleHistory.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ParticleHistory.hpp; sourceTree = "<group>"; };
+		6D4F05441DE9180E0038F646 /* Utils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Utils.cpp; sourceTree = "<group>"; };
+		6D4F05451DE9180E0038F646 /* Utils.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Utils.hpp; sourceTree = "<group>"; };
+		6D4F05481DEA396F0038F646 /* PhysicalConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PhysicalConstants.h; path = ../../../src/utils/PhysicalConstants.h; sourceTree = "<group>"; };
+		6D4F054D1DEA429E0038F646 /* ScalarField.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ScalarField.cpp; path = ../../../src/Physics/ScalarField.cpp; sourceTree = "<group>"; };
+		6D4F054E1DEA429E0038F646 /* ScalarField.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = ScalarField.hpp; path = ../../../src/Physics/ScalarField.hpp; sourceTree = "<group>"; };
 		6D6093E11DAF2F8600C1D635 /* cache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cache.h; sourceTree = "<group>"; };
 		6D6093E21DAF2F8600C1D635 /* memory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = memory.h; sourceTree = "<group>"; };
 		6D6093E31DAF2F8600C1D635 /* zfparray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zfparray.h; sourceTree = "<group>"; };
@@ -138,6 +147,7 @@
 			children = (
 				6D114A371DAF12E400DB669E /* d4 */,
 				6D4F05371DE214B50038F646 /* hydrogen */,
+				6D4F05431DE917F00038F646 /* utils */,
 				6D114A361DAF12E400DB669E /* Products */,
 				6D6094341DAF312D00C1D635 /* tests */,
 				6D6093DF1DAF2F8600C1D635 /* zfp */,
@@ -169,8 +179,21 @@
 				6D4F053D1DE215120038F646 /* hydrogen-main.cpp */,
 				6D4F05401DE3C4530038F646 /* ParticleHistory.cpp */,
 				6D4F05411DE3C4530038F646 /* ParticleHistory.hpp */,
+				6D4F054D1DEA429E0038F646 /* ScalarField.cpp */,
+				6D4F054E1DEA429E0038F646 /* ScalarField.hpp */,
+				6D4F05481DEA396F0038F646 /* PhysicalConstants.h */,
 			);
 			path = hydrogen;
+			sourceTree = "<group>";
+		};
+		6D4F05431DE917F00038F646 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				6D4F05441DE9180E0038F646 /* Utils.cpp */,
+				6D4F05451DE9180E0038F646 /* Utils.hpp */,
+			);
+			name = utils;
+			path = ../../src/utils;
 			sourceTree = "<group>";
 		};
 		6D6093DF1DAF2F8600C1D635 /* zfp */ = {
@@ -379,6 +402,7 @@
 				6D60941B1DAF2F8600C1D635 /* decode2f.c in Sources */,
 				6D60943D1DAF38BF00C1D635 /* main.cpp in Sources */,
 				6D6094171DAF2F8600C1D635 /* bitstream.c in Sources */,
+				6D4F05461DE9180E0038F646 /* Utils.cpp in Sources */,
 				6D6094231DAF2F8600C1D635 /* encode3f.c in Sources */,
 				6D60941F1DAF2F8600C1D635 /* encode1f.c in Sources */,
 				6D60941A1DAF2F8600C1D635 /* decode2d.c in Sources */,
@@ -388,6 +412,7 @@
 				6D60941E1DAF2F8600C1D635 /* encode1d.c in Sources */,
 				6D6094381DAF312D00C1D635 /* testzfp.cpp in Sources */,
 				6D6094191DAF2F8600C1D635 /* decode1f.c in Sources */,
+				6D4F054F1DEA429E0038F646 /* ScalarField.cpp in Sources */,
 				6D60941C1DAF2F8600C1D635 /* decode3d.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -397,6 +422,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				6D4F05421DE3C4530038F646 /* ParticleHistory.cpp in Sources */,
+				6D4F05471DE9180E0038F646 /* Utils.cpp in Sources */,
+				6D4F05501DEA429E0038F646 /* ScalarField.cpp in Sources */,
 				6D4F053F1DE215320038F646 /* hydrogen-main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
